@@ -20,7 +20,7 @@ nav a {
 
 button {
     padding: 10px;
-    background-color: #2c5feb;
+    background-color: #2c5feb; 
     color: white;
     border: none;
     cursor: pointer;
@@ -30,3 +30,10 @@ button:hover {
     background-color: #2c5feb;
 }
 
+#fetchNumberBtn {
+    background-color: #007bff; 
+}
+
+#fetchNumberBtn:hover {
+    background-color: #0056b3;
+}
