@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Завдання 1</h1>
+    <button id="fetchNumberBtn">Отримати число</button>
+    <p id="result"></p>
+
+    <script>
+        // Завдання 1: Основи async/await
+        async function fetchNumber() {
+            return new Promise((resolve) => {
+                setTimeout(() => resolve(42), 2000); // Повертаємо число через 2 секунди
+            });
+        }
+
+        async function getNumber() {
+            try {
+                const number = await fetchNumber();
+                document.getElementById('result').innerText = `Отримане число: ${number}`;
+            } catch (error) {
+                document.getElementById('result').innerText = `Помилка: ${error}`;
+            }
+        }
+
+        document.getElementById('fetchNumberBtn').addEventListener('click', getNumber);
+    </script>
+</body>
+</html>
